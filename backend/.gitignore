@@ -1,0 +1,34 @@
+# Maven target folder
+target/
+
+HELP.md
+
+# Maven Wrapper (keep wrapper scripts, ignore jar if you want)
+.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+
+# Eclipse / STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# VS Code
+.vscode/
+
+# NetBeans (optional if you’re not using)
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# OS files (optional)
+.DS_Store
+Thumbs.db
