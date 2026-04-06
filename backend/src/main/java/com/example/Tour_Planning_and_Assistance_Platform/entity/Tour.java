@@ -17,8 +17,15 @@ public class Tour {
     private Long id;
 
     private String title;
+    
+    @Column(length = 1000)     //newly added
+    private String description;
+
     private Integer duration;
     private Double budget;
+    
+    @Enumerated(EnumType.STRING)   //newly added
+    private TourType type; 
 
     private LocalDateTime createdAt;
 
