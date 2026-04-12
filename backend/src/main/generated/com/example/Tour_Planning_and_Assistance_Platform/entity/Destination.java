@@ -24,7 +24,6 @@ public class Destination {
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "destination")
-    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<TourDestination> tourDestinations;
 
     // Constructors
@@ -53,28 +52,10 @@ public class Destination {
     public String getCategory() { return category; }
     public void setCategory(String category) { this.category = category; }
 
-    public Double getRating() { return rating; }
-    public void setRating(Double rating) { this.rating = rating == null ? 0.0 : rating; }
+    public double getRating() { return rating; }
+    public void setRating(Double rating) { this.rating = rating; }
 
-
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public List<Review> getReviews() {
-        return this.reviews;
-    }
-
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
-
-    public List<TourDestination> getTourDestinations() {
-        return this.tourDestinations;
-    }
-
-    public void setTourDestinations(List<TourDestination> tourDestinations) {
-        this.tourDestinations = tourDestinations;
-    }
+    public void setRating(Double rating) {
+    this.rating = (rating == null) ? 0.0 : rating;
+}
 }
