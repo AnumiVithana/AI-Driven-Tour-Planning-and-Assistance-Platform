@@ -1,0 +1,7 @@
+venv
+vectorstore/chroma_db
+
+#this file will authomatically create when running preprocess.py file
+data/processed_places.json
+
+app/__pycache__/

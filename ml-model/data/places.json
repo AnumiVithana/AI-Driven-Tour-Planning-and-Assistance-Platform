@@ -1,0 +1,623 @@
+[
+  {
+    "place_id": 1,
+    "name": "Ella",
+    "category": "Nature",
+    "description": "Ella is a scenic hill country destination in Sri Lanka known for lush greenery, tea plantations, waterfalls, and iconic train journeys. It is a popular spot for hiking and relaxation.",
+    "highlights": ["Nine Arches Bridge", "Little Adam's Peak"],
+    "activities": ["Hiking", "Photography", "Train rides"],
+    "averageRating": 4.5,
+    "reviews": [
+      "Amazing place with scenic views",
+      "Perfect for relaxing and hiking"
+    ],
+    "bestTime": "December to March",
+    "location": "Badulla, Sri Lanka"
+  },
+  {
+    "place_id": 2,
+    "name": "Sigiriya Lion Rock",
+    "category": "Heritage",
+    "description": "Sigiriya (Lion's Rock) is an ancient rock fortress and palace ruin situated in the Matale District of Sri Lanka. Built during the reign of King Kassapa I (AD 477-495), it is one of the eight UNESCO World Heritage Sites in the country, famous for its ancient frescoes that resemble those in the Ajanta Caves of India. The site is surrounded by an extensive network of gardens and reservoirs.Today, it is a must-visit destination celebrated for its rich history and stunning summit views. While travelers praise the awe-inspiring atmosphere, many note that the climb of over 1,200 steps can be challenging and crowded. To ensure a cooler and more serene experience, early morning visits are highly recommended. The site is particularly popular among history enthusiasts and adventurers, though a moderate level of fitness is required.",
+    "highlights": ["Lion's Paws Entrance", "Mirror Wall", "Ancient Frescoes", "Water Gardens", "Summit Palace Ruins"],
+    "activities": ["Hiking", "Photography", "Historical Tours", "Sunset Watching"],
+    "averageRating": 4.6,
+    "reviews": [
+      "Climbing Sigiriya Lion Rock was an unforgettable experience. The views from the top are absolutely breathtaking, and the history behind this ancient fortress makes it even more special. The climb can be a bit challenging, but it's totally worth it once you reach the summit.",
+      "It is quite a walk/climb to get to the top of the rock but a worth the experience. Our guide took us early in the morning which was a great time to go when the sun was just up. Quite an atmosphere looking over the misty valleys.",
+      "Incredible experience and well worth the walk up. Our guide got us there for 6:15 and it was worth it to avoid the heat and huge crowds. Really recommend going with a guide as there’s a lot to learn. Make sure you avoid the dodgy guides trying to help you up the rock as they demand money.",
+      "With our guide we climbed to the top of the rock facing more than 1000 steps total. There are various points where you can stop to catch your breath and, possibly, stop for those who do not feel like tackling the whole climb. Fantastic view from above and interesting history of the fortress."
+    ],
+    "bestTime": "5:00 AM - 6:30 PM",
+    "entry_fee_usd": 35.00,
+    "location": "Matale, Sri Lanka"
+  },
+  {
+    "place_id": 3,
+    "name": "Temple of the Sacred Tooth Relic",
+    "category": "Heritage",
+    "description": "The Sri Dalada Maligawa (Temple of the Sacred Tooth Relic) in Kandy is one of the holiest Buddhist sites in the world, renowned for housing the sacred tooth relic of the Buddha and for its deep historical, cultural, and political significance-making it a must-visit destination admired for its stunning architecture and rich heritage, though visitors often note high entrance fees and heavy crowds; to enhance the experience, it's best to time your visit during daily prayer services, while also being prepared for crowds, hot stone floors (bring socks), and occasional pushy vendors despite the generally clean and well-maintained facilities.",
+    "highlights": ["NanumuraMangallaya","Audience Hall","World Buddhism Museum","preserved tusks of Raja the Elephant"],
+    "activities": ["Photography", "Historical Tours"],
+    "averageRating": 4.2,
+    "reviews": [
+      "Go early. The temple is always crowded. Expect long queues both at the shoe deposit counters & the ticket counters. Take Sri Lankan currency",
+      "Modest dress is required. Visitors should cover their shoulders and knees. Sarongs or shawls are often available for loan.",
+      "The structure of the temple is very beautiful and well maintained, there are many faithful who pray and bring offerings to ask for a grace. However, the sacred relic is not visible as it is kept inside a gold case.",
+      "A beautiful temple and museum. Worth it not to rush and to take it in as a deliberate walk through. Around 6:30 pm there is a prayer ritual which fills the temple with people in prayer. Make sure to bring socks as the outside stones get hot during the day."
+    ],
+    "bestTime": "5.30 AM - 8.00PM",
+    "entry_fee_usd": 7.00,
+    "location": "Kandy"
+  },
+  {
+    "place_id": 4,
+    "name": "Udawalawe National Park",
+    "category": "Nature",
+    "description": "Udawalawe National Park is a highly recommended destination for travelers seeking abundant wildlife-especially its large population of elephants-along with rare plants and diverse species, all set within stunning landscapes and a peaceful, immersive atmosphere often enhanced by knowledgeable guides; easily accessible from popular locations, the park is best experienced during early morning or late afternoon safaris, with advance booking (such as via WhatsApp) and opting for private or off-peak tours offering excellent value.",
+    "highlights": ["Sankapala Raja Maha Viharaya"],
+    "activities": ["wild elephant sightings","Safari Jeep Tours","Bird Watching"],
+    "averageRating": 4.6,
+    "reviews": [
+      "This is very enjoyble journey",
+      "Great experience, communication,pickup, and safari!",
+      "We had such an amazing safari in Udawalawe National Park! Lahiru was a brilliant guide, super friendly and full of interesting facts that made the whole experience even more fun.",
+      "The only downside is that the opportunity to hire an \"extra\" guide was sprung on us at the park entrance which we didn't do but might have if we had been given information in advance."
+    ],
+    "bestTime": "6:00 AM to 6:00 PM",
+    "cost_per_person(USD)": 30.00,
+    "location": "Embilipitiya"
+  },
+  {
+    "place_id": 5,
+    "name": "Little Adam's Peak View Point",
+    "category": "Nature",
+    "description": "ittle Adam's Peak hike offers one of the easiest ways to soak up incredible panoramic views of Ella and the surrounding mountains. This short and sweet hike in Sri Lanka takes you up to the perfect viewpoint just outside of town, and is an ideal sunrise or sunset excursion.It's not to be confused with Adam's Peak or Sri Pada, Little Adam’s Peak can be accessed on a well-formed, winding footpath through the tea plantations of Ella.I woke up well before sunrise one morning to take the stairs up to the small peak and was mesmerised by the orange glow of the rising sun as it peeked over the mountain range and soaked the valley with light. From the top, you can admire the incredible position of Ella against the backdrop of rolling hills and tea plantations.",
+    "highlights": ["visiting the nearby Nine Arches Bridge","Visit the Mahamevnawa Buddhist Monastery"],
+    "activities": ["Hiking","photography","ziplining"],
+    "averageRating": 4.6,
+    "reviews": [
+      "A quick and easy hike with beautiful panoramic views of Ella's mountains and tea plantations. Takes about 30-45 minutes to reach the top, making it perfect for all travelers.",
+      "From our hotel Ella flower garden you cross the road and the journey to the top begins. What a beautiful climbing trip to reach the top. Once you arrive at the top you have a beautiful view over the mountains in Ella"
+    ],
+    "bestTime": "6.00 AM to 11.00 AM",
+    "cost_per_person(USD)": 0.00,
+    "location": "Ella"
+  },
+  {
+    "place_id": 6,
+    "name": "Bentota Beach",
+    "category": "Beach",
+    "description": "A Sri Lankan coastal city famous for golden beaches, Bentota is situated on the southern coastal tip of the Galle District of the Southern Province . The town is a popular tourist attraction. It is especially famous among the foreign tourists. The name comes from a mythical story which dates back to kings time saying a demon called Bem ruled this river ( tota = river bank. Bentota hosts a handful of world proclaimed hotels. It is the hosting land for the famous Sri Lankan Jeweler Aida. Bentota also delivers an ancient art of healing called Ayurveda . Bentota is also famous for its production in Toddy. An alcoholic beverage made out of cocunut nectar. The city's population is estimated to be between 25,000-50,000.",
+    "highlights": ["warm sand"],
+    "activities": ["jet-skiing","windsurfing","snorkeling","relaxing"],
+    "averageRating": 4.5,
+    "reviews": [
+      "Bentota Beach is a beautiful and relaxing beach with soft golden sand and clear blue water. It's perfect for swimming, sunbathing, and enjoying water sports. The atmosphere is calm and clean, making it a great place to unwind.",
+      "This is a gem of a beach several km's of unspoilt golden sandy beach.Little or few bars no aggressive hackers.just plenty of unspoilt paradise",
+      "Awesome beach with very clean and friendly surrounding.",
+      "Get the ferry boat at the back of the beach to a restaurant"
+    ],
+    "bestTime": "24 hours",
+    "cost_per_person(USD)": 0.00,
+    "location": "Bentota"
+  },
+  {
+    "place_id": 7,
+    "name": "Royal Botanical Gardens",
+    "category": "Nature",
+    "description": "Royal Botanic Gardens, Peradeniya are about 5.5 km to the west of the city of Kandy in the Central Province of Sri Lanka. In 2016, the garden was visited by 1.2 million locals and 400,000 foreign visitors.[1] It is near the Mahaweli River (the longest river in Sri Lanka).[2] It is renowned for its collection of orchids. The garden includes more than 4000 species of plants, including orchids, spices, medicinal plants and palm trees.[3] Attached to it is the National Herbarium of Sri Lanka. The total area of the botanical garden is 147 acres (0.59 km2), at 460 meters above sea level, and with a 200-day annual rainfall. It is managed by the Department of national botanic gardens.",
+    "highlights": ["Cannonball Tree","Orchid House"],
+    "activities": ["photography","relaxing"],
+    "averageRating": 4.5,
+    "reviews": [
+      "A really beautiful place to visit and walk around,Absolutely amazing gardens and park and well worth a visit and with some nice cafes in the centre to stop for lunch",
+      "Very large and beautiful park, well maintained, with many species of trees, many of which are unknown to us in Europe. The visit can be done by electric cart which is very pleasant. It is probably not essential but friendly and relaxing.",
+      "It was a real treat to visit such stunning gardens. There are so many different parts and definitely worth a visit and easy to spend a few hours exploring. Only disappointment was the cafe, it was too long to wait for a sandwich!"
+    ],
+    "bestTime": "7.30 AM - 5.00 PM",
+    "cost_per_person(USD)": 10.00,
+    "location": "Peradeniya - Kandy"
+  },
+  {
+    "place_id": 8,
+    "name": "Galle Dutch Fort",
+    "category": "Heritage",
+    "description": "Galle, located in southern Sri Lanka, is a historic coastal city known for its rich colonial past and role as an important trading hub since ancient times. The iconic Galle Fort, a UNESCO World Heritage Site built by the Dutch, encloses the old town on a scenic headland overlooking the sea on three sides. Its 2.5 km-long ramparts offer a pleasant walk with stunning ocean views. Historically, Galle is believed by some, including Sir Emerson Tennant, to be the biblical city of Tarshish, linked to trade with ancient civilizations. The city's name may come from the Portuguese word 'Galo' (cock), or the Sinhala word 'Gala' (rock), reflecting its origins and geography.",
+    "highlights": ["iconic lighthouse","Black Fort","Old Dutch Hospital"],
+    "activities": ["shopping on Pedlar Street","sunset","photography"],
+    "averageRating": 4.4,
+    "reviews": [
+      "It's a shopping mall in an archeological theme park catering to those who's taste is diamond studded jewelry and boutique restaurants,, I'm amazed it's still on the UNESCO list",
+      "It's a small town in itself . Small streets with cafes , shopping , restaurants, stay all at one place . Traffic is a bit problem",
+      "We found Galle Fort to be a great location for wandering the pretty streets. Also it offers a good hub for visiting many beautiful nearby beaches and smaller towns."
+    ],
+    "bestTime": "12.00 AM - 11.59 PM",
+    "cost_per_person(USD)": 0.00,
+    "location": "Galle"
+  },
+  {
+    "place_id": 9,
+    "name": "Nine Arches Bridge",
+    "category": "Nature",
+    "description": "The Nine Arch Bridge, also known as the Bridge in the Sky, is a famous viaduct bridge located in Ella, Sri Lanka. Built in 1919 during the colonial era, it is one of the finest examples of railway construction in the country. The bridge features a unique nine-degree curve and was constructed entirely using local materials and labor under British supervision.Surrounded by lush greenery and tea plantations, the bridge is a popular tourist attraction known for its scenic views and iconic train journeys. Visitors often come to watch trains pass over the bridge, take photographs, and enjoy the peaceful natural environment.",
+    "highlights": ["Watch the Train Pass"],
+    "activities": ["Photography & Drones","Walk on the Tracks"],
+    "averageRating": 4.4,
+    "reviews": [
+      "Worth a visit please take a Tuk Tuk",
+      "Great sight and not too inaccessible - glad we saw it and caught the train crossing",
+      "Nice to see this old architecture build back in 1800 something. You can walk it take tuk tuk which drops till the bridge . There is cafe and tea shop also . Nice to see train passing",
+      "The view of this bridge is spectacular something that is a must when visiting Sri Lanka. We went over it on the train then got a tuk tuk up to the bridge"
+    ],
+    "bestTime": "6.00 AM-6.00 PM",
+    "cost_per_person(USD)": 0.00,
+    "location": "Ella"
+  },
+  {
+    "place_id": 10,
+    "name": "Sea Turtle Farm Galle Mahamodara",
+    "category": "Beach",
+    "description": "Our Turtle Hatchery is a conservation and rehabilitation facility dedicated to the protection of sea turtles. We focus on rescuing injured and distressed turtles, providing appropriate medical care, treatment, and rehabilitation. Once fully recovered, turtles are carefully released back into their natural marine environment. The hatchery accommodates multiple species of sea turtles, including hatchlings and adult turtles, and functions as an educational and conservation-focused facility that promotes awareness of marine protection and responsible environmental practices. We offer structured volunteer programmes for individuals and groups interested in supporting conservation efforts through turtle care assistance, rehabilitation support, and facility maintenance. The hatchery is open to the public, and all visits directly contribute to the continuation of our turtle rescue, rehabilitation, and release programmes, supporting long-term marine conservation efforts.",
+    "highlights": [
+      "Sea turtle conservation and rehabilitation",
+      "Opportunity to see multiple turtle species",
+      "Educational experience on marine conservation",
+      "Close interaction with hatchlings and adult turtles"
+    ],
+    "activities": ["Learn about sea turtles","Photography"],
+    "averageRating": 4.6,
+    "reviews": [
+      "Loved the background, loved the story telling, adored the varieties of turtles.A must do - even if it's only to donate something to assist with the rescue of these amazing creatures.",
+      "The Sea Turtle Hatchery Centre, Mahamodara offers a great chance to see turtles up close and learn about conservation. Friendly staff and a memorable experience, especially seeing baby turtles.",
+      "We visited a turtle hatchery to clean the area, and it was a very meaningful experience. It helped us understand the importance of protecting sea turtles and keeping the environment clean."
+    ],
+    "bestTime": "8.30 AM - 6.30 PM",
+    "cost_per_person(USD)": 7.00,
+    "location": "Mahamodara - Galle"
+  },
+  {
+    "place_id": 11,
+    "name": "Mirissa Beach",
+    "category": "Beach",
+    "description": "Mirissa, a sleepy seaside town on Sri Lanka's southern coast in Matara District, feels like a postcard come to life. As the region's main fishing port, it serves up fresh tuna, mullet, snapper and butterfish straight from the nets. Dawn brings whale-watching boats cutting through glassy water, while the days invite lazy hours on golden sand and exploration of nearby historic towns. When night falls, Mirissa's relaxed beach bars and lively local scene add just the right splash of adventure to a perfectly tropical stay.",
+    "highlights": ["visiting the scenic Parrot Rock","enjoying fresh seafood dinners"],
+    "activities": ["Surfing and Watersports","Beachside Dining and Nightlife","Snorkel with Turtles"],
+    "averageRating": 4.3,
+    "reviews": [
+      "This beach has eroded so much you cannot walk on most of it",
+      "Mirissa Beach is the best beach in the whole island of Sri Lanka. It's long enough, the sand is clean, the ocean is very beautiful.",
+      "one of the best beaches in Sri Lanka. surrounded by coconut trees and awesome restaurents.",
+      "Mesa is the one of the best place which I ever seen in Sri Lanka. I love it.Is a place that you can enjoy for couples trips and family also ."
+    ],
+    "bestTime": "12.00 AM - 11.59 PM",
+    "cost_per_person(USD)": 0.00,
+    "location": ""
+  },
+  {
+    "place_id": 12,
+    "name": "Pinnawala Elephant Orphanage",
+    "category": "Nature",
+    "description": "Sri Lanka is one of the best country to visit in Asia. Sri Lanka is the hottest and best travel destination and lures adventures of all kind. you would love to solitude of nature and steady walks through trails. Sometime you love relaxing by the beach with sun bathing and cool sea breeze caressing your skin. You would like to visit elephant parks and see elephants so close and take selfies. Or you love to night life you crave and a little game of chances at a casino. What ever make you thrill, with the best tourist places to visit in Sri Lanka, this tiny island has it all.",
+    "highlights": [],
+    "activities": [
+      "watching the daily river bath",
+      "bottle-feeding baby elephants",
+      "Feed to Elephants"
+    ],
+    "averageRating": 3.5,
+    "reviews": [
+      "Seeing the elephants washing in the river was lovely. They seem well cared for and it was a nice experience.",
+      "Wonderful opportunity to see and interact with these beautiful animals. Incredible animals. Very reasonable cost to have the opportunity to see and interact with the elephants. This place truly a great place to visit",
+      "Lovely driver snd generally a good day out but note - this trip does not include entry to the orphanage- only to get there . It costs another £15 per person to get in ."
+    ],
+    "bestTime": "8:30 AM - 5:30 PM",
+    "cost_per_person(USD)": 7.00,
+    "location": "Pinnawala"
+  },
+  {
+    "place_id": 13,
+    "name": "Yala National Park",
+    "category": "Nature",
+    "description": "Yala National Park is one of the most famous wildlife destinations in Sri Lanka, known for its rich biodiversity and scenic landscapes. Established in 1894, the park features a mix of beaches, freshwater lakes, rivers, and rocky outcrops, creating diverse habitats for wildlife.It is especially popular for spotting leopards, elephants, crocodiles, and a wide variety of birds, making it a favorite among nature lovers and families. The best time for safaris is early morning or late afternoon when animals are more active and temperatures are cooler.\n\nAlthough the park can become crowded during peak times, visiting during off-peak hours and hiring an experienced guide can greatly improve the overall experience.",
+    "highlights": ["Bundala National Park"],
+    "activities": [" jeep safaris","Wildlife Viewing","Wildlife BBQ"],
+    "averageRating": 3.6,
+    "reviews": [
+      "Hire a safari vehicle to take you around in the after lunch hours. You can also safari at dawn. You'll see elephants, spotted deer, crocodiles, water buffalo, hundreds of bird species and leopards. The park is forest, grassland and lagoons. You won't be disappointed.",
+      "So overcrowded, there were hundreds and hundreds of Jeeps with long lines, crowding a single terrified elephant. One jeep drove right in front of the elephant, only a foot away.",
+      "This is a very popular attraction. Do not let the frantic start put you of after 30 minutes you are all alone and a good driver will find a nice spot for breakfast, we could see Crocodile & Sambar Deer where we stopped.When a Leopard is sighted there is competition to get you there but the Wardens keep drivers in line & ensure everyone gets an opportunity. There is so much more to see."
+    ],
+    "bestTime": "7.00 AM - 6.00 PM",
+    "cost_per_person(USD)": 80.00,
+    "location": "Monaragala"
+  },
+  {
+    "place_id": 14,
+    "name": "Golden Temple",
+    "category": "Heritage",
+    "description": "The temple is called 'golden' because many of the Buddha statues here are covered with gold. It is carved into the rock and consists of five main caves, in which 153 Buddha statues of various sizes have been preserved (this is the largest collection of Buddha statues, many of which are more than 2000 years old). In addition, there are statues of gods and goddesses, kings of Sri Lanka, as well as wall paintings with an area of over 2,100 square meters. You need to climb to the temple from the main entrance with a statue of a large golden Buddha, which towers over the temple. Despite the rather tedious climb, we were delighted with the interior decoration.",
+    "highlights": ["Five Main Caves","Giant Golden Buddha"],
+    "activities": [
+      "exploring the historic cave shrines",
+      "admiring ancient Buddhist artwork"
+    ],
+    "averageRating": 4.4,
+    "reviews": [
+      "Temple set in the rock, something really suggestive and very particular. You can admire many Buddhas, each with remarkable artistic characteristics. Don't miss it!",
+      "Great place to visit, historical site, neat and clean and local people are providing a great service to visitors / tourists.NOTE: Women wearing head scarfs must remove their scarfs as part of the temple tradition (for locals and foreigners), something we learnt at visiting site."
+    ],
+    "bestTime": "7.00 AM - 7.00 PM",
+    "cost_per_person(USD)": 10.00,
+    "location": "Dambulla"
+  },
+  {
+    "place_id": 15,
+    "name": "Elephant Freedom Project",
+    "category": "Nature",
+    "description": "Visit us and experience a special elephant encounter which is suitable for young and old, families, couples and single travelers. This is your chance to get a memorable impression of a day in the life of 2 Sri Lankan captive elephants who are not being used for working nor riding. The small family run Elephant Freedom Project offers refuge, freedom from work and hardship to the 2 elephants both named Kumari. At the project they are free from working in the riding industry and the wood logging. The Elephant Freedom Project aims to give them a good and safe home, which is made possible thanks to your visit! Booking in advance required.",
+    "highlights": [
+      "Ethical elephant experience with no riding",
+      "Opportunity to walk alongside elephants in nature",
+      "Focus on elephant conservation and welfare",
+      "Small group visits for a more personal experience",
+      "Peaceful natural setting away from crowded tourist areas"
+    ],
+    "activities": [
+      "walk with, feed, and bathe retired elephants",
+      "Educational insights into elephant behavior and care",
+      "enjoy home-cooked Sri Lankan meals"
+    ],
+    "averageRating": 4.9,
+    "reviews": [
+      "An ethical way to get close to Asian elephants. We fed them and learned all about the two animals. They were clearly well looked after and happy. Children were so happy to be so close.",
+      "We walked with the elephants at their own pace, fed them as we walked, bathed them and learnt so much along the way. No chains and no weapons. The elephants are allowed to roam as they like. The guides are so knowledgeable! I would 100% recommend.",
+      "Very nice and people very nice",
+      "Incredible experience, far from the typical experience of elephant tourism in Asia. Really accommodating and well explained info for the two elephants Manike and Kumari"
+    ],
+    "bestTime": "8.30 AM - 4.30 PM",
+    "cost_per_person(USD)": 50.00,
+    "location": "Kegalle"
+  },
+  {
+    "place_id": 16,
+    "name": "Hikkaduwa Beach",
+    "category": "Beach",
+    "description": "Hikkaduwa Beach is an absolute gem on Sri Lanka's southwestern coast. The golden sand stretches for miles, perfect for long sunrise walks or sunset lounging. The water is incredibly clear, making it ideal for snorkeling and spotting colorful tropical fish and sea turtles right from the shore. The beach has a wonderful laid-back vibe with plenty of beachfront cafes and restaurants serving fresh seafood. Surfers will love the consistent waves, especially during the season from November to April. The coral reef just offshore creates a natural sanctuary teeming with marine life. Whether you're seeking adventure through water sports, relaxation under swaying palms, or vibrant nightlife, Hikkaduwa delivers. The local community is warm and welcoming, adding to the authentic Sri Lankan experience. It's easily accessible from Colombo and makes for a perfect beach getaway. Highly recommended for families, couples, and solo travelers alike.",
+    "highlights": ["Community Tsunami Museum","Nightlife"],
+    "activities": ["surfing", "snorkeling", "turtle spotting","Glass-Bottom Boat Rides","Relaxation"],
+    "averageRating": 4.2,
+    "reviews": [
+      "Very good experience at turtle beach and rest of beach . Nice place to spend day with some great food and lovely walks .",
+      "Wonderful clean sandy beach, locals offer sun loungers, massage, corn, swim huge turtles that can be petted, fed or swim with them, a little far away you can see little sharks and fish",
+      "To visit at the end of a tour in Sri Lanka or at the beginning to relax for two days the sea is not very beautiful but acceptable for a few days"
+    ],
+    "bestTime": "24 hours",
+    "cost_per_person(USD)": 0.00,
+    "location": "Hikkaduwa"
+  },
+  {
+    "place_id": 17,
+    "name": "Colombo",
+    "category": "City",
+    "description": "Colombo is the commercial capital of Sri Lanka, known for its vibrant city life, colonial history, and modern development. Originally a major port for ancient trade routes, the city gained importance during Portuguese, Dutch, and British rule. Today, Colombo blends historic landmarks with modern attractions, including shopping malls, cultural sites, and seaside promenades. Visitors can explore temples, museums, markets, and enjoy the lively atmosphere of Sri Lanka's largest city.",
+    "highlights": [
+      "Kelaniya Raja Maha Vihara",
+      "Jami Ul-Alfar Mosque",
+      "Independence Square",
+      "Colombo National Museum",
+      "Galle Face Green",
+      "Pettah Market"
+    ],
+    "activities": [
+      "City sightseeing",
+      "Shopping",
+      "Visiting museums and temples",
+      "Street food exploration",
+      "Walking along Galle Face Green",
+      "Exploring local markets"
+    ],
+    "averageRating": 4.2,
+    "reviews": [
+      "A busy and vibrant city with lots to explore",
+      "Great mix of culture, history, and modern life",
+      "Perfect place for shopping and food تجرب"
+    ],
+    "bestTime": "December to March",
+    "cost_per_person(USD)": 10.00,
+    "location": "Colombo, Sri Lanka"
+  },
+  {
+    "place_id": 18,
+    "name": "Nuwara Eliya",
+    "category": "City",
+    "description": "Nuwara Eliya, often referred to as 'Little England' is a scenic hill country town in Sri Lanka known for its cool climate, colonial-era architecture, and breathtaking landscapes. Located at an altitude of 1,868 meters in the central highlands, the town is surrounded by misty mountains, lush tea plantations, and rolling hills, creating a peaceful and refreshing atmosphere.It is one of the most important regions for tea production in Sri Lanka and offers visitors the chance to explore tea estates and enjoy world-famous Ceylon tea. The town is also overlooked by Pidurutalagala, the highest mountain in the country, adding to its natural beauty. Nuwara Eliya is a popular destination for relaxation, sightseeing, and experiencing a unique blend of Sri Lankan and British colonial charm.",
+    "highlights": ["Sita Temple","Gregory Lake","Moon plains"],
+    "activities": [
+      "Visiting tea estates and factories",
+      "Boat rides at Gregory Lake",
+      "Hiking and nature walks",
+      "Sightseeing and photography",
+      "Exploring colonial buildings",
+      "Enjoying cool climate relaxation"
+    ],
+    "averageRating": 4.6,
+    "reviews": [
+      "Beautiful and place with amazing weather",
+      "Loved the tea plantations and scenic views",
+      "Perfect destination to relax and enjoy nature"
+    ],
+    "bestTime": "February to April",
+    "cost_per_person(USD)": 0.00,
+    "location": "Nuwara Eliya"
+  },
+  {
+    "place_id": 19,
+    "name": "Passikudah Beach",
+    "category": "Beach",
+    "description": "Really lovely beach with a wide variety of options for day time activities. One main designated swimming area which can get VERY busy with locals but still nice and then mostly private swimming areas for the hotels on the beach which were in-forced by police who at times did seem to be stopping people going to the private beaches based on assumption due to race which was a little uncomfortable to watch.",
+    "highlights": [
+      "Calm waves perfect for swimming",
+      "Sunsets over the Bay of Bengal",
+      "Nearby resorts and restaurants"
+    ],
+    "activities": [
+      "Swimming and sunbathing",
+      "Snorkeling and diving",
+      "Beach volleyball",
+      "Jet skiing and water sports",
+      "Photography and nature walks"
+    ],
+    "averageRating": 4.5,
+    "reviews": [
+      "Superb beach, strictly nothing to do with the western and southern beaches of Sri Lanka. Beautiful beach where you can swim without fear of drowning.",
+      "This beach is a dream,September is not yet a high season so the beach was almost empty You could walk great on the beach",
+      "Great beach, clean and not especially crowded. Stong current depending on weather and season but the beach is guarded.",
+      "Amazing beach. The bay provides shallow and virtually pool like basin of sea water creating a very safe bathing spot. Water was not only calm but as warm and was virtually still with very mild waves."
+    ],
+    "bestTime": "April to September",
+    "cost_per_person(USD)": 0.00,
+    "location": "Batticaloa District - Sri Lanka"
+  },
+  {
+    "place_id": 20,
+    "name": "Jaffna Fort",
+    "category": "Heritage",
+    "description": "Jaffna Fort is one of the best-preserved colonial fortresses in Sri Lanka, originally built by the Portuguese in the 17th century and later expanded by the Dutch. Located in the city of Jaffna, the fort reflects a rich history shaped by Portuguese, Dutch, and British rule until Sri Lanka's independence in 1948.\n\nToday, Jaffna Fort is a popular tourist attraction known for its massive walls, open grounds, and scenic views of the surrounding lagoon. Visitors can walk along the historic ramparts, explore the architecture, and enjoy peaceful views, especially during sunset when the sky turns vibrant shades of orange and pink. The fort offers a unique blend of history, culture, and natural beauty in northern Sri Lanka.",
+    "highlights": [
+      "Well-preserved colonial fortress",
+      "Portuguese and Dutch architectural design",
+      "Massive stone ramparts and walls",
+      "Panoramic views of Jaffna lagoon",
+      "Historic military stronghold"
+    ],
+    "activities": ["exploring ruins of barracks","enjoying the sunset","Photography"],
+    "averageRating": 3.8,
+    "reviews": [
+      "Historical place so many history 5 out of 5",
+      "Jaffna Fort reflects the rich history of Jaffna. Walking around the fort, feeling the sea breeze, and watching the sunset from its walls is a peaceful and memorable experience for every visitor.",
+      "No maps or indexed to cover up the sightseeing in sequence.Not many people. Nice view. Suggest to improve the facilities and showcasing to entice tourists."
+    ],
+    "bestTime": " 8:00 AM - 6:00 PM",
+    "cost_per_person(USD)": 5.00,
+    "location": "Jaffna"
+  },
+  {
+    "place_id": 21,
+    "name": "Sinharaja Forest Reserve",
+    "category": "nature",
+    "description": "Sinharaja Forest Reserve is a national park in Sri Lanka. It is of international significance and has been designated a Biosphere Reserve and World Heritage Site by UNESCO. The hilly virgin rainforest, part of the Sri Lanka lowland rain forests ecoregion, was saved from the worst of commercial logging by its inaccessibility, and was designated a World Biosphere Reserve in 1978 and a World Heritage Site in 1988. The reserve's name translates as Kingdom of the Lion.",
+    "highlights": ["over 60% endemic trees", "95% endemic birds", "including leopards", "purple-faced langurs","butterflies"],
+    "activities": ["birdwatching", "explore hidden waterfalls", "take night walks for nocturnal wildlife", "visit nearby tea factories"],
+    "averageRating": 4.4,
+    "reviews": [
+      "Amazing rain forest ,weft climate,Often it makes a gloomy and mysterious atmosphere. Huge trees with canopy forest.There are plenty of herbal plants",
+      "Cute for a walk in nature. Difficulty in seeing animals in addition to small insects or birds due to low biodiversity.",
+      "I took a full day trip to the Sinharaja Forest reserve, with Cinnamon Bentota Beach hotel-based naturalist Thisara Kuruppu last weekend. This is not to be missed."
+    ],
+    "bestTime": "December to April and August to September",
+    "cost_per_person(USD)": 15.00,
+    "location": "Deniyaya"
+  },
+  {
+    "place_id": 22,
+    "name": "Rawana Fall",
+    "category": "Nature",
+    "description": "Ravana Falls is one of the most famous and widest waterfalls in Sri Lanka, located near Ella within the Ravana Ella Wildlife Sanctuary. Standing at about 82 feet, the waterfall is a popular attraction known for its powerful cascade and scenic surroundings. It is named after the legendary King Ravana from local folklore, adding cultural significance to its natural beauty.The falls are easily accessible from the main road, making it a convenient stop for travelers exploring Ella. Visitors can enjoy the refreshing atmosphere, take photographs, and even swim in safe areas during calmer conditions. Adventure seekers may also climb nearby rocks for stunning views of the falls and surrounding landscapes. Ravana Falls is best visited during the rainy season when the water flow is at its peak, creating a spectacular sight.",
+    "highlights": [
+      "One of the widest waterfalls in Sri Lanka",
+      "Scenic waterfall surrounded by lush greenery",
+      "Easily accessible roadside attraction",
+      "Associated with King Ravana folklore"
+    ],
+    "activities": ["Photography","Relaxing"],
+    "averageRating": 4.0,
+    "reviews": [
+      "It's on the road while travelling so don't need to go specifically to watch this waterfall . Just okey not so great . Much more to see",
+      "Easy to reach from Ella. It’s nice as a short stopover during your trip or on your way to the much more impressive Diyaluma Falls.",
+      "Beautiful waterfalls. The biggest fall is 50m but as there are a series, it's much bigger in total falls. Only short drive from Ella. Very worth it",
+      "The waterfall is nice, but it is too overrun by tourists, and there is pretty dirty with a lot of garbage. But it is quick to visit."
+    ],
+    "bestTime": "October to December",
+    "cost_per_person(USD)": 0.00,
+    "location": "Ella"
+  },
+  {
+    "place_id": 23,
+    "name": "Coconut Tree Hill",
+    "category": "Beach",
+    "description": "Just a 15-minute walk from Mirissa Beach you will find Coconut Tree Hill, a small coconut tree far atop a hillock. The hill has perhaps become the most Instagrammed spot in Mirissa and it's easy to see why; the whole hill looks over to the gorgeous turquoise ocean and it is covered by tall coconut trees swaying in the sea breeze. At the centre of the peak there is an area of cleared land and this is where you can get that perfect shot of you in a coconut grove with the sparkling Indian Ocean behind you. ",
+    "highlights": ["get beautiful photos"],
+    "activities": ["Photography"],
+    "averageRating": 4.4,
+    "reviews": [
+      "Best location in Mirissa to get beautiful photos.",
+      "The view is pretty on the sea, rocks and the beach that adjoins. When we went (late morning), not too many people. Small bar at the top very nice with nice view, which allows to quench your drink if it is hot. Maybe not essential but nice.",
+      "It’s was nice place to visit as a family. While touring around Sri Lanka , don’t miss out this amazing view of Coconut tree and the ocean."
+    ],
+    "bestTime": "6.00 AM - 7.00 PM ",
+    "cost_per_person(USD)": 0.00,
+    "location": "Mirissa"
+  },
+  {
+    "place_id": 24,
+    "name": "Diyaluma Falls",
+    "category": "Nature",
+    "description": "To get to the fall there are three routes, but the most popular is the Uda Diyaluma trail. The trail is quite easy since the ascent isn't too steep, making it a family-friendly activity to partake in. At times, the trek can seem quite surreal; it's needless to say that you will pass some beautiful landscapes, but at one point you will go through endless fields of lemongrass where you will be encompassed in a cloud of citrusy freshness. The climb will take about an hour, but once you get to the top you will be greeted to a stunning view of the rolling hills and the town below. Once you've reached the summit you can enjoy a dip in the cool rock pools or even have a picnic on the large rock boulders which are scattered around the area.",
+    "highlights": ["Natural Infinity Pool"],
+    "activities": ["Hike & Adventure","Swimming"],
+    "averageRating": 4.6,
+    "reviews": [
+      "We had a wonderful time at Diyaluma Waterfall with all the knowledge of our local independent guide Salma who showed us and explained the fauna and flora before swimming in the different waterholes upstream of this beautiful waterfall.",
+      "A short hike rewards visitors with panoramic landscapes and peaceful surroundings. Ideal for nature lovers and adventure seekers, Diyaluma Falls is a perfect spot to swim, relax, and experience Sri Lanka's raw beauty.",
+      "The waterfalls are beautiful and the hike is very doable. You can drive (or be driven) quite high up toward the parking area, and from there it’s another 20–30 minutes uphill to reach the top of the falls. However, compared to the many other activities we’ve done in Sri Lanka so far, we found it quite busy at the waterfalls."
+    ],
+    "bestTime": "January to April or June to September",
+    "cost_per_person(USD)": 0.00,
+    "location": "Koslanda"
+  },
+  {
+    "place_id": 25,
+    "name": "Bambarakanda Falls",
+    "category": "Nature",
+    "description": "Bambarakanda Waterfall, located in the Badulla District, is the tallest waterfall in Sri Lanka, cascading from a height of 263 meters (863 feet). Surrounded by misty mountains, pine forests, and lush greenery, it is one of the most scenic natural attractions in the central highlands.The waterfall is a popular destination for nature lovers, hikers, and photographers, offering peaceful surroundings and impressive views. Visitors can enjoy short hikes, explore the nearby forest, and take in the beauty of the cascading water. Bambarakanda is ideal for those seeking a quiet and less crowded nature experience in Sri Lanka.",
+    "highlights": ["Natural Plunge Pool"],
+    "activities": ["Hike & Adventure","Photography and Nature"],
+    "averageRating": 4.5,
+    "reviews": [
+      "nice place ,can comfortably go near to the fall by any vehicle .then only less than 500metres walk and hike. But no place to rest except one private tea center .it is also not opened everyday.Bathing is not recommended as sudden rise of water beam can happened.",
+      "Babarakanda falls is situated in Kalupahana. The Babarakanda falls can be found in a forest of pine trees. It is beautiful falls. Traveling to this place is not easy as to the other falls of Sri Lanka.",
+      "Situated in Kalupahana in the Badulla District,The bambarakanda fall can be found in a forest of pine trees.Tallest waterfall in Sri Lanka and very beautiful place...",
+      "we went there to see .there was a lot of walking. almost half an hour to an hour.but the walking was worth it.the falls were awesome"
+    ],
+    "bestTime": "January to April or June to September",
+    "cost_per_person(USD)": 0.00,
+    "location": "Kalupahana"
+  },
+  {
+    "place_id": 26,
+    "name": "Kandy",
+    "category": "City",
+    "description": "Kandy in Sinhala, pronounced is the English name for the city of Maha Nuvara (Senkadagalapura) in the centre of Sri Lanka. It is the capital of the Central Province and Kandy District. It lies in the midst of hills in the Kandy Valley which crosses an area of tropical plantations, mainly tea. Kandy is one of the most scenic cities in Sri Lanka. Kandy is of both an administrative and religious city. It is the capital of the Central Province and also of the administrative district of Kandy.",
+    "highlights": [
+      "Temple of the Tooth Relic",
+      "Kandy Lake",
+      "Royal Botanical Gardens Peradeniya",
+      "Udawatta Kele Sanctuary",
+      "Traditional Kandyan dance performances"
+    ],
+    "activities": [
+      "Visiting cultural and religious sites",
+      "Walking around Kandy Lake",
+      "Exploring botanical gardens",
+      "Watching cultural dance shows",
+      "Shopping for handicrafts and souvenirs",
+      "Enjoying scenic viewpoints"
+    ],
+    "averageRating": 4.5,
+    "reviews": [
+      "A beautiful city with rich culture and history",
+      "Loved visiting the Temple of the Tooth and the lake",
+      "Great mix of nature and tradition"
+    ],
+    "bestTime": "December to April",
+    "cost_per_person(USD)": 10.00,
+    "location": "Kandy, Sri Lanka"
+  },
+  {
+    "place_id": 27,
+    "name": "Dehiwala Zoo",
+    "category": "Nature",
+    "description": "The Dehiwala Zoo, officially the Department of National Zoological Gardens, is a premier, historic (est. 1936) zoological garden in Sri Lanka located near Colombo. It features a large collection of over 300 species of animals, including reptiles, birds, and fish, with popular daily shows and a focus on conservation.",
+    "highlights": [
+      "Wide variety of animals from around the world",
+      "Well-maintained zoological gardens",
+      "Educational exhibits on wildlife conservation"
+    ],
+    "activities": [
+      "Exploring different animal enclosures",
+      "Learning about wildlife and conservation",
+      "Taking photos with animals"
+    ],
+    "averageRating": 3.8,
+    "reviews": [
+      "It's nice place. I went there with my family my son was enjoyed there. We saw some animals from overseas. It's nice place for the families to stay relaxed",
+      "Our Trip to the Zoo was great, the Uber was able to drop us off directly infront of the main entrance of the zoo, I will caution it is a busy tight street with no sidewalks so if you are bringing your children, be mindful of the vehicles.",
+      "Well experienced place to watch animals in a zoo and got lot of knowledge about animal world. Recommended for children to come and visit."
+    ],
+    "bestTime": "8:30 AM to 6:00 PM",
+    "cost_per_person(USD)": 14.00,
+    "location": "Dehiwala Mount Lavinia"
+  },
+  {
+    "place_id": 28,
+    "name": "Pidurangala Rock",
+    "category": "Nature",
+    "description": "Pidurangala is a massive rock formation located a few kilometers north of Sigiriya in Sri Lanka. It has an interesting history closely related to that of the Sigiriya Rock Fortress. Climbing to the top of Pidurangala Rock is more strenuous than climbing Sigiriya. If you are fit and adventurous it is a climb worth making. It will take you about two hours. There is far less to see on this site than Sigiriya",
+    "highlights": ["panoramic view of the iconic Sigiriya Rock Fortress","historic Buddhist monastery complex"],
+    "activities": ["Hiking","Photography","Explore the White Temple","Spot Local Wildlife"],
+    "averageRating": 4.8,
+    "reviews": [
+      "Pidurangala Vihara is an ancient Buddhist temple located in Pidurangala village of Mathale district, Sri Lanka. The temple was built on a huge rock called Pidurangara, located a few kilometers north of the historical fortress of Sidiriya.",
+      "Hiking boots highly recommended. The trail is located in jungle. Because of the wild elephants, the area is dangerous.",
+      "Very good idea to climb here for the best view of Sigiriya Rock rather than climb it itself, def worth the early start ! Would recommend going with a guide as very dark to start."
+    ],
+    "bestTime": "9.00 AM - 5.00 PM",
+    "cost_per_person(USD)": 0.00,
+    "location": "Sigiriya"
+  },
+  {
+    "place_id": 29,
+    "name": "Kelaniya Raja Maha Vihara",
+    "category": "Heritage",
+    "description": "The Kelaniya Rajamaha Viharaya, one of Sri Lanka's most sacred Buddhist temples, is believed to be blessed by the Buddha himself during his third visit to the island. Renowned for its stunning murals, ancient history, and spiritual aura, it continues to inspire devotion and cultural pride.",
+    "highlights": [
+      "One of the most sacred Buddhist temples in Sri Lanka",
+      "Beautiful ancient murals and paintings",
+      "Large reclining Buddha statue",
+      "Historic temple with rich cultural heritage"
+    ],
+    "activities": [
+      "Visiting the temple and observing religious rituals",
+      "Exploring ancient murals and artwork",
+      "Meditation and peaceful reflection",
+      "Learning about Sri Lankan Buddhist history"
+    ],
+    "averageRating": 4.8,
+    "reviews": [
+      "One of the most revered historic Buddhist temples of the orient. Located near River Kelani, this presents panoramic views and has a rich history behind it.",
+      "Spectator murals inside. Very beautiful and historic temple. Given it’s not on tourists map, all boards are in Sinhalese.",
+      "Been there with friend and totally in love with the peaceful and dignified here. I respect the Sri Lankan people' beleif."
+    ],
+    "bestTime": "6.00 AM - 8.00 PM",
+    "cost_per_person(USD)": 0.00,
+    "location": "Kelaniya"
+  },
+  {
+    "place_id": 30,
+    "name": "Water World Lanka",
+    "category": "Nature",
+    "description": "Water World Lanka in Kelaniya is Sri Lanka's premier public aquarium and bird park, featuring South Asia's first underwater tunnel. Located near Colombo, this attraction showcases a vast collection of freshwater and marine fish, a bird park, and a scenic river safari. It is a popular, affordable educational spot. ",
+    "highlights": [
+      "Sri Lanka's largest freshwater aquarium",
+      "Wide variety of local and exotic fish species",
+      "Underwater tunnel aquarium experience",
+      "Bird park and butterfly garden"
+    ],
+    "activities": [
+      "Observing freshwater and exotic fish species",
+      "Learning about aquatic ecosystems",
+      "Exploring the bird park and butterfly garden",
+      "Taking photos of aquatic life"
+    ],
+    "averageRating": 4.0,
+    "reviews": [
+      "One of the biggest aquariums in Sri Lanka. They had various kinds of fish and animals in this park. You can see a lot of birds in the birds park. Usually a busy place and not much parking space in this area.",
+      "The bird park was another highlight, with a beautiful collection of exotic birds in a serene environment. The whole place is perfect for families, nature lovers, or anyone looking for a peaceful and educational outing.",
+      "Nice place to visit with family.beautiful fish aquarium more than hundered of sea fish variety. Beautiful birds and boat ride."
+    ],
+    "bestTime": "10:00 AM - 1:00 PM",
+    "cost_per_person(USD)": 3.00,
+    "location": "Kelaniya"
+  }
+]
