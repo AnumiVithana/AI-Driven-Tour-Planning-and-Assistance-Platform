@@ -27,36 +27,4 @@ public class TourDestination {
     private Destination destination;
 
     // getters & setters
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getDayNumber() {
-        return this.dayNumber;
-    }
-
-    public void setDayNumber(Integer dayNumber) {
-        this.dayNumber = dayNumber;
-    }
-
-    public Tour getTour() {
-        return this.tour;
-    }
-
-    public void setTour(Tour tour) {
-        this.tour = tour;
-    }
-
-    public Destination getDestination() {
-        return this.destination;
-    }
-
-    public void setDestination(Destination destination) {
-        this.destination = destination;
-    }
 }
