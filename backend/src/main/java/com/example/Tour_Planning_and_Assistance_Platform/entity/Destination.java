@@ -18,19 +18,18 @@ public class Destination {
     private String description;
 
     private String category;
-    private Double rating = 0.0;
+    private double rating;
 
     @OneToMany(mappedBy = "destination", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "destination")
-    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<TourDestination> tourDestinations;
 
     // Constructors
     public Destination() {}
 
-    public Destination(String name, String location, String description, String category, Double rating) {
+    public Destination(String name, String location, String description, String category, double rating) {
         this.name = name;
         this.location = location;
         this.description = description;
@@ -53,28 +52,6 @@ public class Destination {
     public String getCategory() { return category; }
     public void setCategory(String category) { this.category = category; }
 
-    public Double getRating() { return rating; }
-    public void setRating(Double rating) { this.rating = rating == null ? 0.0 : rating; }
-
-
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public List<Review> getReviews() {
-        return this.reviews;
-    }
-
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
-
-    public List<TourDestination> getTourDestinations() {
-        return this.tourDestinations;
-    }
-
-    public void setTourDestinations(List<TourDestination> tourDestinations) {
-        this.tourDestinations = tourDestinations;
-    }
+    public double getRating() { return rating; }
+    public void setRating(double rating) { this.rating = rating; }
 }

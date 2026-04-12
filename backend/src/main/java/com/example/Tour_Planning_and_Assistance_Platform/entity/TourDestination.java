@@ -3,7 +3,6 @@ package com.example.Tour_Planning_and_Assistance_Platform.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Getter
@@ -19,7 +18,6 @@ public class TourDestination {
 
     @ManyToOne
     @JoinColumn(name = "tour_id")
-    @JsonBackReference
     private Tour tour;
 
     @ManyToOne
@@ -27,36 +25,4 @@ public class TourDestination {
     private Destination destination;
 
     // getters & setters
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getDayNumber() {
-        return this.dayNumber;
-    }
-
-    public void setDayNumber(Integer dayNumber) {
-        this.dayNumber = dayNumber;
-    }
-
-    public Tour getTour() {
-        return this.tour;
-    }
-
-    public void setTour(Tour tour) {
-        this.tour = tour;
-    }
-
-    public Destination getDestination() {
-        return this.destination;
-    }
-
-    public void setDestination(Destination destination) {
-        this.destination = destination;
-    }
 }

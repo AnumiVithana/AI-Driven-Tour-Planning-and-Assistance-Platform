@@ -4,12 +4,6 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
-@NoArgsConstructor 
-@AllArgsConstructor
 
 @Entity
 @Getter
@@ -21,63 +15,16 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Double rating = 0.0;
+    private Double rating;
 
     @Column(length = 1000)
     private String comment;
 
-    @PrePersist
-    protected void onCreate() {
-        this.createdAt = LocalDateTime.now();
-    }
     private LocalDateTime createdAt;
 
     @ManyToOne
     @JoinColumn(name = "destination_id")
-    @JsonBackReference
     private Destination destination;
 
     // getters & setters
-
-
-    //Custom Setter to handle null ratings
-    public void setRating(Double rating) {
-        this.rating = (rating == null) ? 0.0 : rating;
-    }
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getComment() {
-        return this.comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return this.createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Destination getDestination() {
-        return this.destination;
-    }
-
-    public void setDestination(Destination destination) {
-        this.destination = destination;
-    }
-
-    public Double getRating() {
-        return this.rating;
-    }
 }
