@@ -1,7 +1,5 @@
 package com.example.Tour_Planning_and_Assistance_Platform.service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,54 +48,51 @@ public class TourService {
     // CORE LOGIC - Customized Tour Generator
     public Map<String, Object> generateTour(int duration, double budget, List<String> preferences) {
 
-        List<Destination> allDestinations = destinationRepository.findAll();
-        List<Destination> destinations = new ArrayList<>();
+        String FASTAPI_URL = "http://127.0.0.1:8000/recommend";
+        org.springframework.web.client.RestTemplate restTemplate = new org.springframework.web.client.RestTemplate();
+        org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
+        headers.setContentType(org.springframework.http.MediaType.APPLICATION_JSON);
         
-        if (preferences != null && !preferences.isEmpty()) {
-            for (Destination d : allDestinations) {
-                if (preferences.contains(d.getCategory())) {
-                    destinations.add(d);
+        // Map to FastAPI requirements
+        Map<String, Object> fastApiRequest = new java.util.HashMap<>();
+        fastApiRequest.put("days", duration > 0 ? duration : 3);
+        fastApiRequest.put("people", 2); // Default
+        
+        String budgetLevel = "medium";
+        if (budget > 0) {
+            if (budget < 500) budgetLevel = "low";
+            else if (budget > 1500) budgetLevel = "high";
+        }
+        fastApiRequest.put("budget_level", budgetLevel);
+        fastApiRequest.put("travel_pace", "balanced"); // Default
+        fastApiRequest.put("preferences", preferences != null ? preferences : List.of());
+        fastApiRequest.put("must_visit_places", List.of());
+        
+        org.springframework.http.HttpEntity<Map<String, Object>> request = new org.springframework.http.HttpEntity<>(fastApiRequest, headers);
+        
+        try {
+            org.springframework.http.ResponseEntity<Map> response = restTemplate.postForEntity(FASTAPI_URL, request, Map.class);
+            if (response.getBody() != null) {
+                // Ensure we do not bring 'source' or 'sources' into SpringBoot response
+                Map<String, Object> result = new java.util.HashMap<>();
+                if (response.getBody().containsKey("summary")) {
+                    result.put("summary", response.getBody().get("summary"));
                 }
+                if (response.getBody().containsKey("selected_places")) {
+                    result.put("selected_places", response.getBody().get("selected_places"));
+                }
+                if (response.getBody().containsKey("itinerary")) {
+                    result.put("itinerary", response.getBody().get("itinerary"));
+                }
+                
+                return result;
             }
+        } catch (Exception e) {
+            System.err.println("Error calling FastAPI: " + e.getMessage());
+            e.printStackTrace();
+            return Map.of("error", "Unable to generate tour from AI model");
         }
         
-        // fallback in case no destinations match the preferences
-        if (destinations.isEmpty()) {
-            destinations = allDestinations;
-        }
-
-        List<Map<String, Object>> plan = new ArrayList<>();
-        List<com.example.Tour_Planning_and_Assistance_Platform.entity.TourDestination> tourDestinations = new ArrayList<>();
-
-        Tour tour = new Tour();
-        long count = tourRepository.countByType(TourType.GENERATED);
-        tour.setTitle("Customized tour " + (count + 1));
-        tour.setDuration(duration);
-        tour.setBudget(budget);
-        tour.setType(TourType.GENERATED);
-
-        for (int i = 0; i < duration; i++) {
-            Destination d = destinations.get(i % destinations.size());
-
-            Map<String, Object> day = new HashMap<>();
-            day.put("day", i + 1);
-            day.put("destination", d.getName());
-
-            plan.add(day);
-
-            com.example.Tour_Planning_and_Assistance_Platform.entity.TourDestination td = new com.example.Tour_Planning_and_Assistance_Platform.entity.TourDestination();
-            td.setDestination(d);
-            td.setDayNumber(i + 1);
-            td.setTour(tour);
-            tourDestinations.add(td);
-        }
-
-        tour.setTourDestinations(tourDestinations);
-        Tour saved = tourRepository.save(tour);
-
-        return Map.of(
-                "tourId", saved.getId(),
-                "plan", plan
-        );
+        return Map.of("error", "No response from AI model");
     }
 }

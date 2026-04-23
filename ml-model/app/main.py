@@ -7,7 +7,7 @@ from app.planner import build_itinerary
 from app.llm_formatter import format_itinerary_with_llm
 
 #how to run the fastapi backend
-  #$env:OLLAMA_NO_GPU=1 (only if neaded)
+  #$env:OLLAMA_NO_GPU=1 (only if needed)
   #ollama run llama3 "hello"
   #venv/Scripts/activate(activate VENV)
   #uvicorn app.main:app --reload(Run fastAPI backend)

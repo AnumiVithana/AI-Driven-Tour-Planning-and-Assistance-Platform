@@ -10,6 +10,9 @@ import com.example.Tour_Planning_and_Assistance_Platform.entity.Review;
 import com.example.Tour_Planning_and_Assistance_Platform.repository.DestinationRepository;
 import com.example.Tour_Planning_and_Assistance_Platform.repository.ReviewRepository;
 
+import org.springframework.web.client.RestTemplate;
+import org.springframework.http.HttpHeaders;
+
 
 @Service
 public class ChatService {
@@ -20,51 +23,29 @@ public class ChatService {
     @Autowired
     private ReviewRepository reviewRepository;
 
+    private final RestTemplate restTemplate = new RestTemplate();
+    private final String FASTAPI_CHAT_URL = "http://127.0.0.1:8000/chat";
+
     public String getResponse(String message) {
-
-        message = message.toLowerCase();
-
-        List<Destination> destinations = destinationRepository.findAll();
-
-        // Relaxing places
-        if (message.contains("relax")) {
-            return "You can visit Mirissa, Ella, and Bentota for a relaxing trip.";
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(org.springframework.http.MediaType.APPLICATION_JSON);
+        
+        java.util.Map<String, Object> requestBody = new java.util.HashMap<>();
+        requestBody.put("question", message);
+        requestBody.put("chat_history", java.util.List.of());
+        
+        org.springframework.http.HttpEntity<java.util.Map<String, Object>> request = new org.springframework.http.HttpEntity<>(requestBody, headers);
+        
+        try {
+            org.springframework.http.ResponseEntity<java.util.Map> response = restTemplate.postForEntity(FASTAPI_CHAT_URL, request, java.util.Map.class);
+            if (response.getBody() != null && response.getBody().containsKey("answer")) {
+                return (String) response.getBody().get("answer");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Sorry, I am currently unable to connect to the AI model.";
         }
-
-        // Nature
-        if (message.contains("nature")) {
-            return destinations.stream()
-                    .filter(d -> d.getCategory().equalsIgnoreCase("Nature"))
-                    .map(Destination::getName)
-                    .limit(3)
-                    .reduce("Top nature places: ", (a, b) -> a + b + ", ");
-        }
-
-        // Best rated
-        if (message.contains("best") || message.contains("rating")) {
-
-            return destinations.stream()
-                    .map(d -> {
-                        List<Review> reviews = reviewRepository.findByDestinationId(d.getId());
-
-                        double avg = reviews.stream()
-                                .mapToDouble(r -> r.getRating() != null ? r.getRating() : 0.0)
-                                .average()
-                                .orElse(0);
-
-                        return d.getName() + " (" + avg + ")";
-                    })
-                    .sorted((a, b) -> b.compareTo(a))
-                    .limit(3)
-                    .reduce("Top rated places: ", (a, b) -> a + b + ", ");
-        }
-
-        // Booking help
-        if (message.contains("book")) {
-            return "To book a tour, select a tour and click the booking option.";
-        }
-
-        // Default
+        
         return "You can ask about destinations, tours, or bookings!";
     }
 }

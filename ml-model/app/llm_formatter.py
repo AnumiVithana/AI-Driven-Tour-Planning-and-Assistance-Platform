@@ -26,8 +26,8 @@ Day-by-day itinerary:
 {itinerary}
 
 Write:
-1. A short trip summary
-2. Why these places match the user's needs
-3. Keep it easy to read
+1. A very concise trip summary (maximum 2 to 3 sentences).
+2. A brief 1-sentence explanation of why these places match the user's needs.
+3. Keep it extremely brief and easy to read.
 """
     return llm.invoke(prompt)
