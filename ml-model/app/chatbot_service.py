@@ -42,6 +42,7 @@ def ask_chatbot(question: str, chat_history=None):
     prompt = f"""
 You are a helpful Sri Lankan tourism assistant.
 
+Keep your answer short, concise, and no longer than 2 to 3 sentences.
 Use only the provided context to answer.
 If the answer is not available in the context, say you do not have enough information.
 
