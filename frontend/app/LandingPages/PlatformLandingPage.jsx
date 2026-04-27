@@ -380,10 +380,10 @@ const PlatformLandingPage = () => {
 					</p>
 					<br />
 					<div className="flex gap-4 justify-center">
-						<button className="px-6 py-3 text-sm bg-black text-white rounded-xl hover:bg-zinc-800 hover:shadow-xl transition-colors font-medium flex items-center gap-2">
+						<Link href="/customize-tour" className="px-6 py-3 text-sm bg-black text-white rounded-xl hover:bg-zinc-800 hover:shadow-xl transition-colors font-medium flex items-center gap-2">
 							<Settings size={18} />
 							Customize my tour
-						</button>
+						</Link>
 						<Link href="/chat" className="px-6 py-3 text-sm border border-zinc-300 bg-zinc-50 text-black rounded-xl hover:bg-zinc-200 hover:shadow-xl transition-colors font-medium flex items-center gap-2">
 							<Bot size={18} />
 							Chat with travel assistant

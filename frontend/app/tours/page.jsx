@@ -36,10 +36,10 @@ export default function ToursPage() {
 						</p>
 					</div>
 					
-					<button className="relative z-10 shrink-0 px-8 py-4 bg-white text-black rounded-xl hover:bg-zinc-200 transition-colors font-bold text-lg flex items-center gap-3 shadow-[0_0_40px_rgba(255,255,255,0.2)] group">
+					<Link href="/customize-tour" className="relative z-10 shrink-0 px-8 py-4 bg-white text-black rounded-xl hover:bg-zinc-200 transition-colors font-bold text-lg flex items-center gap-3 shadow-[0_0_40px_rgba(255,255,255,0.2)] group">
 						<Settings size={22} className="group-hover:rotate-90 transition-transform duration-500" />
 						Create Tour
-					</button>
+					</Link>
 				</div>
 			</div>
 

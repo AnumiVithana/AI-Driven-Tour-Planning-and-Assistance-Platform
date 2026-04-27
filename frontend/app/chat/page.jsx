@@ -62,7 +62,7 @@ const ChatPage = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-white text-zinc-900 font-sans selection:bg-emerald-500/30 overflow-hidden">
+    <div className="flex flex-col h-screen bg-white text-zinc-900 selection:bg-emerald-500/30 overflow-hidden">
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 border-b border-zinc-200 bg-white/80 backdrop-blur-md sticky top-0 z-10">
         <div className="flex items-center gap-4">
@@ -113,16 +113,16 @@ const ChatPage = () => {
                 className={`flex gap-4 ${message.role === 'user' ? 'flex-row-reverse' : ''}`}
               >
                 <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center shadow-md ${message.role === 'user'
-                    ? 'bg-zinc-100 border border-zinc-200 text-zinc-600'
-                    : 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
+                  ? 'bg-zinc-100 border border-zinc-200 text-zinc-600'
+                  : 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white'
                   }`}>
                   {message.role === 'user' ? <User size={20} /> : <Bot size={20} />}
                 </div>
 
                 <div className={`flex flex-col max-w-[80%] ${message.role === 'user' ? 'items-end' : 'items-start'}`}>
                   <div className={`px-5 py-4 rounded-2xl shadow-sm ${message.role === 'user'
-                      ? 'bg-emerald-600 text-white rounded-tr-none'
-                      : 'bg-zinc-50 border border-zinc-200 text-zinc-800 rounded-tl-none shadow-sm'
+                    ? 'bg-emerald-600 text-white rounded-tr-none'
+                    : 'bg-zinc-50 border border-zinc-200 text-zinc-800 rounded-tl-none shadow-sm'
                     }`}>
                     <p className="text-[15px] leading-relaxed whitespace-pre-wrap">{message.content}</p>
                   </div>
@@ -183,8 +183,8 @@ const ChatPage = () => {
             type="submit"
             disabled={!input.trim() || isLoading}
             className={`absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-xl transition-all ${input.trim() && !isLoading
-                ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 active:scale-95'
-                : 'bg-zinc-200 text-zinc-400 cursor-not-allowed'
+              ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 active:scale-95'
+              : 'bg-zinc-200 text-zinc-400 cursor-not-allowed'
               }`}
           >
             <Send size={20} />
