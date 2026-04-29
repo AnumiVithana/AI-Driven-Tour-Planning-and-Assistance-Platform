@@ -16,8 +16,11 @@ import com.example.Tour_Planning_and_Assistance_Platform.entity.Tour;
 import com.example.Tour_Planning_and_Assistance_Platform.entity.TourType;
 import com.example.Tour_Planning_and_Assistance_Platform.service.TourService;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 @RestController
 @RequestMapping("/api/tours")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TourController {
 
     @Autowired
@@ -40,21 +43,11 @@ public class TourController {
 
     @PostMapping("/generate")
     public Map<String, Object> generate(@RequestBody Map<String, Object> request) {
-        int duration = 0;
-        if (request.containsKey("duration")) {
-            duration = Integer.parseInt(request.get("duration").toString());
-        }
-        
-        double budget = 0.0;
-        if (request.containsKey("budget")) {
-            budget = Double.parseDouble(request.get("budget").toString());
-        }
-        
-        List<String> preferences = null;
-        if (request.containsKey("preferences")) {
-            preferences = (List<String>) request.get("preferences");
-        }
+        return tourService.generateTour(request);
+    }
 
-        return tourService.generateTour(duration, budget, preferences);
+    @PostMapping("/book-generated")
+    public com.example.Tour_Planning_and_Assistance_Platform.entity.Booking bookGenerated(@RequestBody Map<String, Object> request) {
+        return tourService.bookGeneratedTour(request);
     }
 }
