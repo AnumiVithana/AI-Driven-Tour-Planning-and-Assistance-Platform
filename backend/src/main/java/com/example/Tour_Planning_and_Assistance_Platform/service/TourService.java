@@ -46,7 +46,7 @@ public class TourService {
     }
 
     // CORE LOGIC - Customized Tour Generator
-    public Map<String, Object> generateTour(int duration, double budget, List<String> preferences) {
+    public Map<String, Object> generateTour(Map<String, Object> requestParams) {
 
         String FASTAPI_URL = "http://127.0.0.1:8000/recommend";
         org.springframework.web.client.RestTemplate restTemplate = new org.springframework.web.client.RestTemplate();
@@ -55,25 +55,57 @@ public class TourService {
         
         // Map to FastAPI requirements
         Map<String, Object> fastApiRequest = new java.util.HashMap<>();
+        
+        int duration = 3;
+        if (requestParams.containsKey("days")) {
+            duration = Integer.parseInt(requestParams.get("days").toString());
+        } else if (requestParams.containsKey("duration")) {
+            duration = Integer.parseInt(requestParams.get("duration").toString());
+        }
         fastApiRequest.put("days", duration > 0 ? duration : 3);
-        fastApiRequest.put("people", 2); // Default
+        
+        int people = 2;
+        if (requestParams.containsKey("people")) {
+            people = Integer.parseInt(requestParams.get("people").toString());
+        }
+        fastApiRequest.put("people", people > 0 ? people : 2);
         
         String budgetLevel = "medium";
-        if (budget > 0) {
-            if (budget < 500) budgetLevel = "low";
-            else if (budget > 1500) budgetLevel = "high";
+        if (requestParams.containsKey("budget")) {
+            String b = requestParams.get("budget").toString();
+            if (b.equalsIgnoreCase("Budget")) budgetLevel = "low";
+            else if (b.equalsIgnoreCase("Luxury")) budgetLevel = "high";
+            else budgetLevel = "medium";
         }
         fastApiRequest.put("budget_level", budgetLevel);
-        fastApiRequest.put("travel_pace", "balanced"); // Default
-        fastApiRequest.put("preferences", preferences != null ? preferences : List.of());
-        fastApiRequest.put("must_visit_places", List.of());
+        
+        String travelPace = "balanced";
+        if (requestParams.containsKey("pace")) {
+            travelPace = requestParams.get("pace").toString().toLowerCase();
+        } else if (requestParams.containsKey("travel_pace")) {
+            travelPace = requestParams.get("travel_pace").toString().toLowerCase();
+        }
+        fastApiRequest.put("travel_pace", travelPace);
+        
+        List<String> preferences = List.of();
+        if (requestParams.containsKey("preferences")) {
+            preferences = (List<String>) requestParams.get("preferences");
+        }
+        fastApiRequest.put("preferences", preferences);
+        
+        List<String> mustVisit = List.of();
+        if (requestParams.containsKey("mustVisit")) {
+            mustVisit = (List<String>) requestParams.get("mustVisit");
+        } else if (requestParams.containsKey("must_visit_places")) {
+            mustVisit = (List<String>) requestParams.get("must_visit_places");
+        }
+        fastApiRequest.put("must_visit_places", mustVisit);
         
         org.springframework.http.HttpEntity<Map<String, Object>> request = new org.springframework.http.HttpEntity<>(fastApiRequest, headers);
         
         try {
             org.springframework.http.ResponseEntity<Map> response = restTemplate.postForEntity(FASTAPI_URL, request, Map.class);
             if (response.getBody() != null) {
-                // Ensure we do not bring 'source' or 'sources' into SpringBoot response
                 Map<String, Object> result = new java.util.HashMap<>();
                 if (response.getBody().containsKey("summary")) {
                     result.put("summary", response.getBody().get("summary"));
@@ -85,6 +117,11 @@ public class TourService {
                     result.put("itinerary", response.getBody().get("itinerary"));
                 }
                 
+                // Keep the input variables to echo back to frontend if needed for calculation
+                result.put("days", duration);
+                result.put("people", people);
+                result.put("budget_level", budgetLevel);
+                
                 return result;
             }
         } catch (Exception e) {
@@ -94,5 +131,68 @@ public class TourService {
         }
         
         return Map.of("error", "No response from AI model");
+    }
+
+    @Autowired
+    private com.example.Tour_Planning_and_Assistance_Platform.repository.BookingRepository bookingRepository;
+
+    public com.example.Tour_Planning_and_Assistance_Platform.entity.Booking bookGeneratedTour(Map<String, Object> requestParams) {
+        Tour tour = new Tour();
+        tour.setType(TourType.GENERATED);
+        tour.setTitle("Custom Generated Tour");
+        
+        if (requestParams.containsKey("summary")) {
+            String summary = requestParams.get("summary").toString();
+            if (summary.length() > 999) {
+                summary = summary.substring(0, 995) + "...";
+            }
+            tour.setDescription(summary);
+        }
+        
+        if (requestParams.containsKey("days")) {
+            tour.setDuration(Integer.parseInt(requestParams.get("days").toString()));
+        }
+        
+        if (requestParams.containsKey("totalPrice")) {
+            tour.setBudget(Double.parseDouble(requestParams.get("totalPrice").toString()));
+        }
+
+        List<com.example.Tour_Planning_and_Assistance_Platform.entity.TourDestination> tourDestinations = new java.util.ArrayList<>();
+        
+        if (requestParams.containsKey("itinerary")) {
+            List<Map<String, Object>> itinerary = (List<Map<String, Object>>) requestParams.get("itinerary");
+            for (Map<String, Object> dayPlan : itinerary) {
+                int day = 1;
+                if (dayPlan.containsKey("day")) {
+                    day = Integer.parseInt(dayPlan.get("day").toString());
+                }
+                
+                if (dayPlan.containsKey("places")) {
+                    List<String> places = (List<String>) dayPlan.get("places");
+                    for (String placeName : places) {
+                        Destination dest = destinationRepository.findByName(placeName);
+                        if (dest == null) {
+                            dest = new Destination();
+                            dest.setName(placeName);
+                            dest.setCategory("Generated");
+                            dest = destinationRepository.save(dest);
+                        }
+                        com.example.Tour_Planning_and_Assistance_Platform.entity.TourDestination td = new com.example.Tour_Planning_and_Assistance_Platform.entity.TourDestination();
+                        td.setDayNumber(day);
+                        td.setDestination(dest);
+                        td.setTour(tour);
+                        tourDestinations.add(td);
+                    }
+                }
+            }
+        }
+        
+        tour.setTourDestinations(tourDestinations);
+        tour = tourRepository.save(tour);
+        
+        com.example.Tour_Planning_and_Assistance_Platform.entity.Booking booking = new com.example.Tour_Planning_and_Assistance_Platform.entity.Booking();
+        booking.setTour(tour);
+        booking.setStatus("PENDING");
+        return bookingRepository.save(booking);
     }
 }

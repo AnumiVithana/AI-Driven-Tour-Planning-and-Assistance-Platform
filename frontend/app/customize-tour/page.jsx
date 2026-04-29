@@ -64,70 +64,76 @@ const CustomizeTourPage = () => {
     }));
   };
 
-  const generateItineraryLogic = () => {
-    const days = parseInt(formData.days) || 7;
-    const people = parseInt(formData.people) || 2;
-    const budget = formData.budget || 'Standard';
-    const preferences = formData.preferences;
-    const mustVisit = formData.mustVisit;
+  const [isBooking, setIsBooking] = useState(false);
 
-    const budgetMultipliers = { 'Budget': 50, 'Standard': 120, 'Luxury': 350 };
-    const totalPrice = days * people * (budgetMultipliers[budget] || 120);
+  const generateItineraryLogic = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/tours/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    let itinerary = [];
-    let usedDestinations = new Set();
-
-    mustVisit.forEach(name => {
-      const dest = popularDestinations.find(d => d.name === name);
-      if (dest && itinerary.length < days) {
-        itinerary.push(dest);
-        usedDestinations.add(dest.name);
+      if (!response.ok) {
+        throw new Error('Failed to generate tour');
       }
-    });
 
-    if (itinerary.length < days) {
-      const preferred = popularDestinations.filter(d => 
-        !usedDestinations.has(d.name) && preferences.some(p => d.category.includes(p))
-      );
-      preferred.forEach(dest => {
-        if (itinerary.length < days) {
-          itinerary.push(dest);
-          usedDestinations.add(dest.name);
-        }
-      });
+      const data = await response.json();
+      
+      const days = parseInt(formData.days) || 7;
+      const people = parseInt(formData.people) || 2;
+      const budget = formData.budget || 'Standard';
+      const budgetMultipliers = { 'Budget': 50, 'Standard': 120, 'Luxury': 350 };
+      const totalPrice = days * people * (budgetMultipliers[budget] || 120);
+
+      return { ...data, totalPrice };
+    } catch (error) {
+      console.error(error);
+      return null;
     }
-
-    if (itinerary.length < days) {
-      const remaining = popularDestinations.filter(d => !usedDestinations.has(d.name));
-      remaining.forEach(dest => {
-        if (itinerary.length < days) {
-          itinerary.push(dest);
-          usedDestinations.add(dest.name);
-        }
-      });
-    }
-
-    const dayPlan = itinerary.slice(0, days).map((dest, index) => ({
-      day: index + 1,
-      destination: dest.name,
-      category: dest.category,
-      image: dest.image,
-      activity: dest.activities?.[index % dest.activities.length] || "Sightseeing"
-    }));
-
-    return { totalPrice, dayPlan };
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsGenerating(true);
-    setTimeout(() => {
-      const result = generateItineraryLogic();
+    const result = await generateItineraryLogic();
+    if (result && !result.error) {
       setGeneratedItinerary(result);
       setIsGenerating(false);
       setIsSuccess(true);
       setShowBookingConfirm(false);
-    }, 2500);
+    } else {
+      setIsGenerating(false);
+      alert('Failed to generate itinerary. Please try again.');
+    }
+  };
+
+  const handleBookNow = async () => {
+    setIsBooking(true);
+    try {
+      const response = await fetch('http://localhost:8080/api/tours/book-generated', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(generatedItinerary),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to book tour');
+      }
+
+      const booking = await response.json();
+      alert(`Tour booked successfully! Booking ID: ${booking.id}`);
+      setIsSuccess(false);
+    } catch (error) {
+      console.error(error);
+      alert('Failed to book tour. Please try again.');
+    } finally {
+      setIsBooking(false);
+    }
   };
 
   return (
@@ -429,24 +435,23 @@ const CustomizeTourPage = () => {
                     </div>
 
                     <div className="flex-1 overflow-y-auto p-8 custom-scrollbar space-y-6">
+                      {generatedItinerary.summary && (
+                        <div className="bg-emerald-50/50 p-6 rounded-3xl border border-emerald-100 mb-6">
+                          <h3 className="text-emerald-800 font-bold mb-2">Tour Summary</h3>
+                          <p className="text-zinc-600 text-sm leading-relaxed">{generatedItinerary.summary}</p>
+                        </div>
+                      )}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {generatedItinerary.dayPlan.map((day) => (
-                          <div key={day.day} className="flex gap-4 p-4 rounded-3xl border border-stone-100 bg-stone-50/30 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
-                            <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
-                              <img src={day.image} alt={day.destination} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                            </div>
-                            <div className="flex-1">
+                        {generatedItinerary.itinerary && generatedItinerary.itinerary.map((dayPlan) => (
+                          <div key={dayPlan.day} className="flex flex-col gap-2 p-5 rounded-3xl border border-stone-100 bg-stone-50/30 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
                               <div className="flex items-center gap-2 mb-1">
-                                <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Day {day.day}</span>
-                                <span className="w-1 h-1 rounded-full bg-stone-300" />
-                                <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{day.category}</span>
+                                <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">Day {dayPlan.day}</span>
                               </div>
-                              <h4 className="font-bold text-zinc-900 mb-1">{day.destination}</h4>
-                              <div className="flex items-center gap-1.5 text-xs text-zinc-500">
-                                <Sparkles size={12} className="text-emerald-500" />
-                                <span className="line-clamp-1">{day.activity}</span>
+                              <h4 className="font-bold text-zinc-900">{dayPlan.places && dayPlan.places.join(", ")}</h4>
+                              <div className="flex items-start gap-1.5 text-xs text-zinc-500 mt-2">
+                                <Sparkles size={12} className="text-emerald-500 flex-shrink-0 mt-0.5" />
+                                <span className="line-clamp-3">{dayPlan.note}</span>
                               </div>
-                            </div>
                           </div>
                         ))}
                       </div>
@@ -492,8 +497,12 @@ const CustomizeTourPage = () => {
                       >
                         Maybe Later
                       </button>
-                      <button className="px-12 py-4 bg-black text-white rounded-2xl font-bold hover:bg-zinc-800 transition-all shadow-xl shadow-zinc-200 active:scale-95">
-                        Yes, Book Now
+                      <button 
+                        onClick={handleBookNow}
+                        disabled={isBooking}
+                        className="px-12 py-4 bg-black text-white rounded-2xl font-bold hover:bg-zinc-800 transition-all shadow-xl shadow-zinc-200 active:scale-95"
+                      >
+                        {isBooking ? 'Booking...' : 'Yes, Book Now'}
                       </button>
                     </div>
                   </motion.div>

@@ -42,17 +42,42 @@ const ChatPage = () => {
     setInput('');
     setIsLoading(true);
 
-    // Simulate AI response
-    setTimeout(() => {
+    // Call SpringBoot API
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${apiUrl}/api/chat`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: input }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      
       const assistantMessage = {
         id: Date.now() + 1,
         role: 'assistant',
-        content: `That sounds like a wonderful idea! Sri Lanka has so much to offer. Based on your interest in "${input}", I'd recommend exploring the lush tea plantations of Nuwara Eliya or the golden beaches of Mirissa. Would you like me to create a custom itinerary for you?`,
+        content: data.response || "Sorry, I couldn't process your request.",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages((prev) => [...prev, assistantMessage]);
+    } catch (error) {
+      console.error("Error communicating with chat API:", error);
+      const errorMessage = {
+        id: Date.now() + 1,
+        role: 'assistant',
+        content: "Sorry, I am having trouble connecting right now. Please try again later.",
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+    } finally {
       setIsLoading(false);
-    }, 2000);
+    }
   };
 
   const handleNewSession = () => {

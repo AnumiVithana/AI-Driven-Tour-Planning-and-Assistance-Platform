@@ -10,7 +10,7 @@ from app.llm_formatter import format_itinerary_with_llm
   #$env:OLLAMA_NO_GPU=1 (only if needed)
   #ollama run llama3 "hello"
   #venv/Scripts/activate(activate VENV)
-  #uvicorn app.main:app --reload(Run fastAPI backend)
+  #(Run fastAPI backend)
 
 
 
